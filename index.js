@@ -6,9 +6,12 @@ const coins = [
   {name: 'NPXS', invest: 50, value: 9978},
   {name: 'LINK', invest: 30.43, value: 0.999},
   {name: 'RVN', invest: 11.089, value: 49.95},
+  {name: 'BNB', invest: 263.60, value: 0.999},
+  {name: 'BTC', invest: 323.75, value: 0.00547866},
+  {name: 'XRP', invest: 18, value: 36.963},
 ];
 
-async function startRequest () {
+function startRequest () {
   let qs = `?start=1&limit=5000&convert=USD`;
   axios.get('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest' + qs, {
       headers: { 'X-CMC_PRO_API_KEY': 'f6aec3fa-5933-45f3-a8f9-f4a888122466' }
