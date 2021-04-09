@@ -1,14 +1,16 @@
 const axios = require('axios');
 const coins = [
-  {name: 'NEO', invest: 44.275, value: 0.999},
-  {name: 'CAKE', invest: 20, value: 1.998},
-  {name: 'ADA', invest: 12.575, value: 10},
-  {name: 'NPXS', invest: 50, value: 9978},
-  {name: 'LINK', invest: 30.43, value: 0.999},
-  {name: 'RVN', invest: 11.089, value: 49.95},
-  {name: 'BNB', invest: 263.60, value: 0.999},
-  {name: 'BTC', invest: 323.75, value: 0.00547866},
-  {name: 'XRP', invest: 18, value: 36.963},
+  {name: 'NEO',   invest: 44.275,   value: 0.999},
+  {name: 'CAKE',  invest: 20,       value: 1.998},
+  {name: 'ADA',   invest: 33.975,   value: 31.4},
+  {name: 'NPXS',  invest: 100,      value: 17425},
+  {name: 'LINK',  invest: 30.43,    value: 0.999},
+  {name: 'RVN',   invest: 11.089,   value: 49.95},
+  {name: 'BNB',   invest: 55,       value: 0.16},
+  {name: 'XRP',   invest: 18,       value: 36.963},
+  {name: 'LIT',   invest: 30,       value: 2.88},
+  {name: 'DOT',   invest: 76,       value: 2},
+  {name: 'ALGO',  invest: 104,      value: 68.41},
 ];
 
 function startRequest () {
@@ -21,7 +23,7 @@ function startRequest () {
     let endResult = 0;
     res.data.data.forEach(item => {
       coins.forEach(coin => {
-        if(item.symbol == coin.name) {
+        if(item.symbol == coin.name && item.name !== 'Lition') {
           console.log('-----------------------------------');
           console.log(coin.name, '(' + item.name + ')');
           
